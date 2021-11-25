@@ -13,7 +13,7 @@ let package = Package(
             targets: ["FreeType"]),
         /// source https://yycking.pixnet.net/blog/post/154177252
         // .executable(name: "ExampleC", targets: ["ExampleC"])
-         .executable(name: "exampleSwift", targets: ["ExampleSwift"])
+        .executable(name: "exampleSwift", targets: ["ExampleSwift"]),
         .executable(name: "bitmap", targets: ["Bitmap"])
     ],
     dependencies: [
