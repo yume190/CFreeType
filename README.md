@@ -22,10 +22,6 @@ swift build
     -f "/System/Library/Fonts/Supplemental/Arial Unicode.ttf" \
     -t "ABCabc新年快樂こんにちは" \
     -s 24
-❯ .build/debug/bitmap \
-    -f "/System/Library/Fonts/Supplemental/Arial Unicode.ttf" \
-    -t "ABCabc新年快樂こんにちは"
-
       ■■■       
       ■■■       
      ■■ ■■      
