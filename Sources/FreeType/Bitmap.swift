@@ -45,7 +45,7 @@ public final class Bitmap: CustomStringConvertible {
         return result
     }
     
-    public func show(bit1: String = "\u{25A0}", bit0: String = "0") -> String {
+    public func show(bit1: String = "\u{25A0}", bit0: String = " ") -> String {
         return mapDimension2.map { slice in
             slice.map { ui8 in
                 let result = String(ui8, radix: 2, uppercase: false)

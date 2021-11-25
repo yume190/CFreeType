@@ -13,16 +13,26 @@ let package = Package(
             targets: ["FreeType"]),
         /// source https://yycking.pixnet.net/blog/post/154177252
         // .executable(name: "ExampleC", targets: ["ExampleC"])
+         .executable(name: "exampleSwift", targets: ["ExampleSwift"])
+        .executable(name: "bitmap", targets: ["Bitmap"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/apple/swift-argument-parser.git", .upToNextMinor(from: "1.0.2")),
     ],
     targets: [
         .executableTarget(
+            name: "Bitmap",
+            dependencies: [
+                "FreeType",
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
+            ]
+        ),
+        .executableTarget(
             name: "ExampleSwift",
             dependencies: [
-                "FreeType"
+                "FreeType",
             ],
             cSettings:[
 //                .unsafeFlags(["-DFT_FREETYPE_H"], nil)
